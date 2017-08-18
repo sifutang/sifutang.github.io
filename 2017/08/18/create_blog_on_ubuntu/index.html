@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="环境搭载," />
 
 
 
@@ -95,15 +95,15 @@
 
 
 <meta name="description" content="1.首先注册github账号并登录, 然后创建一个新的仓库(repository) 2.安装git  在终端中输入:sudo apt-get install git-core  检查是否安装成功:git –version    3.配置node.js环境  在安装node.js之前先安装g++和curl 在终端中输入:sudo apt-get install g++sudo apt-get ins">
+<meta name="keywords" content="环境搭载">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu14.04环境下利用github.io+hexo搭载个人博客">
-<meta property="og:url" content="http://yoursite.com/2017/08/15/create_blog_on_ubuntu/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/08/18/create_blog_on_ubuntu/index.html">
 <meta property="og:site_name" content="Sifu&#39;s Blog">
 <meta property="og:description" content="1.首先注册github账号并登录, 然后创建一个新的仓库(repository) 2.安装git  在终端中输入:sudo apt-get install git-core  检查是否安装成功:git –version    3.配置node.js环境  在安装node.js之前先安装g++和curl 在终端中输入:sudo apt-get install g++sudo apt-get ins">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2017/08/images/github.png">
-<meta property="og:image" content="http://yoursite.com/2017/08/images/nvm_list.png">
-<meta property="og:updated_time" content="2017-08-18T09:44:00.011Z">
+<meta property="og:updated_time" content="2017-08-18T10:10:06.239Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu14.04环境下利用github.io+hexo搭载个人博客">
 <meta name="twitter:description" content="1.首先注册github账号并登录, 然后创建一个新的仓库(repository) 2.安装git  在终端中输入:sudo apt-get install git-core  检查是否安装成功:git –version    3.配置node.js环境  在安装node.js之前先安装g++和curl 在终端中输入:sudo apt-get install g++sudo apt-get ins">
@@ -136,7 +136,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/15/create_blog_on_ubuntu/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/18/create_blog_on_ubuntu/"/>
 
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/create_blog_on_ubuntu/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/18/create_blog_on_ubuntu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sifu.tang">
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T20:07:33+08:00">
-                2017-08-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-18T18:07:33+08:00">
+                2017-08-18
               </time>
             
 
@@ -369,28 +369,14 @@
 <ul>
 <li>在安装node.js之前先安装g++和curl</li>
 <li>在终端中输入:<br>sudo apt-get install g++<br>sudo apt-get install curl</li>
-<li><p>配置nvm(node版本管理器, 可以让你的环境部署多个版本的node), 在终端中输入:<br><code>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash</code><br>其它方式请参考:<a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm github</a></p>
+<li><p>配置nvm(node版本管理器, 可以让你的环境部署多个版本的node), 在终端中输入:</p>
+<figure class="highlight plain"><figcaption><span>-o-</span><a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh" target="_blank" rel="external">| bash```</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">其它方式请参考:[nvm github](https://github.com/creationix/nvm)</div><div class="line"></div><div class="line">&gt; * 安装node.js:</div><div class="line">nvm install 4</div><div class="line">&gt; * 检测node.js是否安装成功:</div><div class="line">nvm ls</div><div class="line"></div><div class="line">![nvm_list](../../images/nvm_list.png)</div><div class="line">笔者开始安装了node.js 0.10, 后面使用hexo时各种坑</div><div class="line"></div><div class="line">&gt; * Tips:设置默认的node.js版本,在终端中输入: nvm alias default v4.8.4</div><div class="line"></div><div class="line">### 4.初始化hexo</div><div class="line">&gt; * 新建一个空目录</div><div class="line">mkdir blog</div><div class="line">cd blog</div><div class="line">&gt; * 初始化</div><div class="line">hexo init </div><div class="line">&gt; * 本地部署</div><div class="line">hexo server</div><div class="line">&gt; *  在浏览器中输入http://localhost:4000/. 至此,一个基本的blog就搭建好了</div><div class="line"></div><div class="line">### 5.将本地的静态文件部署到github上</div><div class="line">&gt; * 在hexo init的目录下, 打开_config.yml文件, 在文档的最后几行中修改内容:</div><div class="line">```deploy:</div><div class="line">type: github</div><div class="line">repository: https://github.com/sifutang/sifutang.github.io.git</div><div class="line">branch: master</div></pre></td></tr></table></figure>
 </li>
-<li><p>安装node.js:<br>nvm install 4</p>
+<li><p>Tips:<br>1.冒号之后要加一个空格在接内容<br>2.repository后面的内容可以采用ssh的形式, 这个就自己百度吧</p>
 </li>
-<li>检测node.js是否安装成功:<br>nvm ls</li>
 </ul>
 </blockquote>
-<p><img src="../../images/nvm_list.png" alt="nvm_list"><br>笔者开始安装了node.js 0.10, 后面使用hexo时各种坑</p>
-<blockquote>
-<ul>
-<li>Tips:设置默认的node.js版本,在终端中输入: set defalut alias v4.8.4</li>
-</ul>
-</blockquote>
-<h3 id="4-初始化hexo"><a href="#4-初始化hexo" class="headerlink" title="4.初始化hexo"></a>4.初始化hexo</h3><blockquote>
-<ul>
-<li>新建一个空目录<br>mkdir blog<br>cd blog</li>
-<li>初始化<br>hexo init </li>
-<li>本地部署<br>hexo server</li>
-<li>在浏览器中输入<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. 至此,一个基本的blog就搭建好了</li>
-</ul>
-</blockquote>
-<h3 id="5-hexo的常用命令"><a href="#5-hexo的常用命令" class="headerlink" title="5.hexo的常用命令"></a>5.hexo的常用命令</h3><blockquote>
+<h3 id="6-hexo的常用命令"><a href="#6-hexo的常用命令" class="headerlink" title="6.hexo的常用命令"></a>6.hexo的常用命令</h3><blockquote>
 <ul>
 <li>新建文章<br>hexo new “file_name”</li>
 <li>清楚网页缓存<br>hexo clean</li>
@@ -399,7 +385,6 @@
 <li>命令可以连用, 比如新写好一篇博文后, 输入<br>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s<br>即可本地部署查看</li>
 </ul>
 </blockquote>
-<p>###</p>
 
       
     </div>
@@ -415,6 +400,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/环境搭载/" rel="tag"># 环境搭载</a>
+          
+        </div>
+      
 
       
       
@@ -424,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/10/first/" rel="next" title="first">
-                <i class="fa fa-chevron-left"></i> first
+              <a href="/2017/08/10/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -509,7 +500,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -517,6 +508,15 @@
 
           
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/about/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
@@ -548,7 +548,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-首先注册github账号并登录-然后创建一个新的仓库-repository"><span class="nav-number">1.</span> <span class="nav-text">1.首先注册github账号并登录, 然后创建一个新的仓库(repository)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装git"><span class="nav-number">2.</span> <span class="nav-text">2.安装git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置node-js环境"><span class="nav-number">3.</span> <span class="nav-text">3.配置node.js环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-初始化hexo"><span class="nav-number">4.</span> <span class="nav-text">4.初始化hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-hexo的常用命令"><span class="nav-number">5.</span> <span class="nav-text">5.hexo的常用命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-首先注册github账号并登录-然后创建一个新的仓库-repository"><span class="nav-number">1.</span> <span class="nav-text">1.首先注册github账号并登录, 然后创建一个新的仓库(repository)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装git"><span class="nav-number">2.</span> <span class="nav-text">2.安装git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置node-js环境"><span class="nav-number">3.</span> <span class="nav-text">3.配置node.js环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-hexo的常用命令"><span class="nav-number">4.</span> <span class="nav-text">6.hexo的常用命令</span></a></li></ol></div>
             
 
           </div>
