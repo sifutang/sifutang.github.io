@@ -104,7 +104,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2017/08/images/github.png">
 <meta property="og:image" content="http://yoursite.com/2017/08/images/nvm_list.png">
-<meta property="og:updated_time" content="2017-08-18T10:35:46.495Z">
+<meta property="og:updated_time" content="2017-08-19T02:00:05.517Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu14.04环境下利用github.io+hexo搭载个人博客">
 <meta name="twitter:description" content="1.首先注册github账号并登录, 然后创建一个新的仓库(repository) 2.安装git  在终端中输入:sudo apt-get install git-core  检查是否安装成功:git –version    3.配置node.js环境  在安装node.js之前先安装g++和curl 在终端中输入:sudo apt-get install g++sudo apt-get ins">
@@ -380,12 +380,7 @@
 <li>检测node.js是否安装成功:<br>nvm ls</li>
 </ul>
 </blockquote>
-<p><img src="../../images/nvm_list.png" alt="nvm_list"><br>笔者开始安装了node.js 0.10, 后面使用hexo时各种坑</p>
-<blockquote>
-<ul>
-<li>Tips:设置默认的node.js版本,在终端中输入: nvm alias default v4.8.4</li>
-</ul>
-</blockquote>
+<p><img src="../../images/nvm_list.png" alt="nvm_list"><br>笔者开始安装了node.js 0.10, 后面使用hexo时各种坑<br>Tips:设置默认的node.js版本,在终端中输入: nvm alias default v4.8.4</p>
 <h3 id="4-初始化hexo"><a href="#4-初始化hexo" class="headerlink" title="4.初始化hexo"></a>4.初始化hexo</h3><blockquote>
 <ul>
 <li>新建一个空目录<br>mkdir blog<br>cd blog</li>
@@ -396,11 +391,14 @@
 </blockquote>
 <h3 id="5-将本地的静态文件部署到github上"><a href="#5-将本地的静态文件部署到github上" class="headerlink" title="5.将本地的静态文件部署到github上"></a>5.将本地的静态文件部署到github上</h3><blockquote>
 <ul>
-<li><p>在hexo init的目录下, 打开_config.yml文件, 在文档的最后几行中修改内容:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">type: github</div><div class="line">repository: https://github.com/sifutang/sifutang.github.io.git</div><div class="line">branch: master</div></pre></td></tr></table></figure>
+<li>配置<br>在hexo init的目录下, 打开_config.yml文件, 在文档的最后几行中修改内容:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">type: github</div><div class="line">repository: https://github.com/sifutang/sifutang.github.io.git</div><div class="line">branch: master</div></pre></td></tr></table></figure>
 </li>
-<li><p>Tips:<br>1.冒号之后要加一个空格在接内容<br>2.repository后面的内容可以采用ssh的形式, 这个就自己百度吧</p>
-</li>
+</ul>
+</blockquote>
+<p>Tips:<br>1.冒号之后要加一个空格再接内容<br>2.repository后面的内容可以采用ssh的形式, 这个就自己百度吧</p>
+<blockquote>
+<ul>
+<li>部署<br>终端中输入命令:<br>hexo clean &amp;&amp; hexo g<br>hexo d</li>
 </ul>
 </blockquote>
 <h3 id="6-hexo的常用命令"><a href="#6-hexo的常用命令" class="headerlink" title="6.hexo的常用命令"></a>6.hexo的常用命令</h3><blockquote>
@@ -539,7 +537,7 @@
             
             
             <div class="site-state-item site-state-tags">
-              <a href="/about/index.html">
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">标签</span>
               </a>
