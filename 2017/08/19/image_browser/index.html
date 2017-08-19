@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="android," />
 
 
 
@@ -94,16 +94,21 @@
 
 
 
-<meta name="description" content="android, camera">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sifu&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="基本需求  读取手机内所有的图片, 使用Grid布局进行展示; 格子中展示的是图片的缩略图(对于大图和长图, 缩放后展示中间的那块); 长按图片进行选择,并展示选择的图片;   效果图: 基本架构项目逻辑分为三层| 展示层     || :——-:  || 服务层     || 数据层     |   展示层: 使用RecyclerView 服务层:     从数据层中拿到图片, 制成缩略图; 对">
+<meta name="keywords" content="android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="打造Android平台下的图片浏览器 -- (零)">
+<meta property="og:url" content="http://yoursite.com/2017/08/19/image_browser/index.html">
 <meta property="og:site_name" content="Sifu&#39;s Blog">
-<meta property="og:description" content="android, camera">
+<meta property="og:description" content="基本需求  读取手机内所有的图片, 使用Grid布局进行展示; 格子中展示的是图片的缩略图(对于大图和长图, 缩放后展示中间的那块); 长按图片进行选择,并展示选择的图片;   效果图: 基本架构项目逻辑分为三层| 展示层     || :——-:  || 服务层     || 数据层     |   展示层: 使用RecyclerView 服务层:     从数据层中拿到图片, 制成缩略图; 对">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2017/08/images/album_home.png">
+<meta property="og:image" content="http://yoursite.com/2017/08/images/album_gird.png">
+<meta property="og:updated_time" content="2017-08-19T09:31:37.550Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sifu&#39;s Blog">
-<meta name="twitter:description" content="android, camera">
+<meta name="twitter:title" content="打造Android平台下的图片浏览器 -- (零)">
+<meta name="twitter:description" content="基本需求  读取手机内所有的图片, 使用Grid布局进行展示; 格子中展示的是图片的缩略图(对于大图和长图, 缩放后展示中间的那块); 长按图片进行选择,并展示选择的图片;   效果图: 基本架构项目逻辑分为三层| 展示层     || :——-:  || 服务层     || 数据层     |   展示层: 使用RecyclerView 服务层:     从数据层中拿到图片, 制成缩略图; 对">
+<meta name="twitter:image" content="http://yoursite.com/2017/08/images/album_home.png">
 
 
 
@@ -132,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/19/image_browser/"/>
 
 
 
 
 
-  <title>Sifu's Blog</title>
+  <title>打造Android平台下的图片浏览器 -- (零) | Sifu's Blog</title>
   
 
 
@@ -157,9 +162,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -272,9 +275,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -304,9 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/19/image_browser/" itemprop="url">打造Android平台下的图片浏览器 -- (零)</a></h1>
+          <h1 class="post-title" itemprop="name headline">打造Android平台下的图片浏览器 -- (零)</h1>
         
 
         <div class="post-meta">
@@ -356,9 +357,7 @@
       
 
       
-        
-          
-            <h2 id="基本需求"><a href="#基本需求" class="headerlink" title="基本需求"></a>基本需求</h2><blockquote>
+        <h2 id="基本需求"><a href="#基本需求" class="headerlink" title="基本需求"></a>基本需求</h2><blockquote>
 <ul>
 <li>读取手机内所有的图片, 使用Grid布局进行展示;</li>
 <li>格子中展示的是图片的缩略图(对于大图和长图, 缩放后展示中间的那块);</li>
@@ -412,8 +411,6 @@
 </blockquote>
 <p>分别用三种方式测试效果后, 第二种方式的效果达到了自己的预期.</p>
 
-          
-        
       
     </div>
     
@@ -428,306 +425,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/18/create_blog_on_ubuntu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sifu.tang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sifu's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/18/create_blog_on_ubuntu/" itemprop="url">Ubuntu14.04环境下利用github.io+hexo搭载个人博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-18T18:07:33+08:00">
-                2017-08-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/android/" rel="tag"># android</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="1-首先注册github账号并登录-然后创建一个新的仓库-repository"><a href="#1-首先注册github账号并登录-然后创建一个新的仓库-repository" class="headerlink" title="1.首先注册github账号并登录, 然后创建一个新的仓库(repository)"></a>1.首先注册github账号并登录, 然后创建一个新的仓库(repository)</h3><p><img src="../../images/github.png" alt="github.png"></p>
-<h3 id="2-安装git"><a href="#2-安装git" class="headerlink" title="2.安装git"></a>2.安装git</h3><blockquote>
-<ul>
-<li><p>在终端中输入:<br>sudo apt-get install git-core</p>
-</li>
-<li><p>检查是否安装成功:<br>git –version</p>
-</li>
-</ul>
-</blockquote>
-<h3 id="3-配置node-js环境"><a href="#3-配置node-js环境" class="headerlink" title="3.配置node.js环境"></a>3.配置node.js环境</h3><blockquote>
-<ul>
-<li>在安装node.js之前先安装g++和curl</li>
-<li>在终端中输入:<br>sudo apt-get install g++<br>sudo apt-get install curl</li>
-<li>配置nvm(node版本管理器, 可以让你的环境部署多个版本的node), 在终端中输入:<br>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh" target="_blank" rel="external">https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh</a> | bash</li>
-</ul>
-</blockquote>
-<p>其它方式请参考:<a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm github</a></p>
-<blockquote>
-<ul>
-<li>安装node.js:<br>nvm install 4</li>
-<li>检测node.js是否安装成功:<br>nvm ls</li>
-</ul>
-</blockquote>
-<p><img src="../../images/nvm_list.png" alt="nvm_list"><br>笔者开始安装了node.js 0.10, 后面使用hexo时各种坑<br>Tips:设置默认的node.js版本,在终端中输入: nvm alias default v4.8.4</p>
-<h3 id="4-初始化hexo"><a href="#4-初始化hexo" class="headerlink" title="4.初始化hexo"></a>4.初始化hexo</h3><blockquote>
-<ul>
-<li>新建一个空目录<br>mkdir blog<br>cd blog</li>
-<li>初始化<br>hexo init </li>
-<li>本地部署<br>hexo server</li>
-<li>在浏览器中输入<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. 至此,一个基本的blog就搭建好了</li>
-</ul>
-</blockquote>
-<h3 id="5-将本地的静态文件部署到github上"><a href="#5-将本地的静态文件部署到github上" class="headerlink" title="5.将本地的静态文件部署到github上"></a>5.将本地的静态文件部署到github上</h3><blockquote>
-<ul>
-<li>配置<br>在hexo init的目录下, 打开_config.yml文件, 在文档的最后几行中修改内容:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">type: github</div><div class="line">repository: https://github.com/sifutang/sifutang.github.io.git</div><div class="line">branch: master</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<p>Tips:<br>1.冒号之后要加一个空格再接内容<br>2.repository后面的内容可以采用ssh的形式, 这个就自己百度吧</p>
-<blockquote>
-<ul>
-<li>部署<br>终端中输入命令:<br>hexo clean &amp;&amp; hexo g<br>hexo d</li>
-</ul>
-</blockquote>
-<h3 id="6-hexo的常用命令"><a href="#6-hexo的常用命令" class="headerlink" title="6.hexo的常用命令"></a>6.hexo的常用命令</h3><blockquote>
-<ul>
-<li>新建文章<br>hexo new “file_name”</li>
-<li>清楚网页缓存<br>hexo clean</li>
-<li>生成静态网页<br>hexo g</li>
-<li>本地部署<br>hexo s/server</li>
-<li>命令可以连用, 比如新写好一篇博文后, 输入<br>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s<br>即可本地部署查看</li>
-</ul>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/10/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sifu.tang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sifu's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/10/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T19:17:41+08:00">
-                2017-08-10
-              </time>
+              <a href="/2017/08/18/create_blog_on_ubuntu/" rel="next" title="Ubuntu14.04环境下利用github.io+hexo搭载个人博客">
+                <i class="fa fa-chevron-left"></i> Ubuntu14.04环境下利用github.io+hexo搭载个人博客
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to sifu’’blog</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -737,10 +464,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -748,6 +476,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -768,8 +500,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -822,6 +563,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本需求"><span class="nav-number">1.</span> <span class="nav-text">基本需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本架构"><span class="nav-number">2.</span> <span class="nav-text">基本架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据层"><span class="nav-number">3.</span> <span class="nav-text">数据层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务层"><span class="nav-number">4.</span> <span class="nav-text">服务层</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -948,10 +705,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
